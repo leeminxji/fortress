@@ -22,13 +22,17 @@ func _ready():
 func _physics_process(fdt):
 	game.Step(fdt)
 #	if game.isEnd: get_tree().quit()
-	if game.isEnd: queue_free()
+	if game.isEnd:
+		queue_free()
+		get_tree().quit()
 
 
 func _process(dt):
 	game.Update(dt)
 #	if game.isEnd: get_tree().quit()
-	if game.isEnd: queue_free()
+	if game.isEnd:
+		queue_free()
+		get_tree().quit()
 
 
 func _exit_tree():

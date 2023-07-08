@@ -15,12 +15,8 @@ func _init(_SetEnd: Callable):
 
 
 func Throw(dt: float):
-	Move(velocity, dt)
+	position += velocity * dt
 	velocity += GRAVITY * dt
 
 	if position.y < 0:
 		SetEnd.call(true)
-
-
-func Move(velocity: Vector2, dt: float):
-	position += velocity * dt
