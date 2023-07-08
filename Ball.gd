@@ -2,6 +2,8 @@ class_name Ball
 
 # Constant
 const GRAVITY = Vector2(0, -9.8)
+const RADIUS = 10
+const COLOR = Color(1.0, 0.0, 0.0)
 
 # Variables
 var position = Vector2(0.0, 0.0)

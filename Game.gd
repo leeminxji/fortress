@@ -5,7 +5,7 @@ var updateCnt: int = 0
 var isEnd: bool = false
 
 var ball: Ball
-
+var cannon: Cannon
 
 func SetEnd(flag: bool):
 	isEnd = flag
@@ -17,6 +17,7 @@ func Ready():
 
 func Enter():
 	ball = Ball.new(SetEnd)
+	cannon = Cannon.new()
 
 
 func Exit():
@@ -30,6 +31,7 @@ func UpdateInput():
 func Step(fdt: float):
 	stepCnt += 1
 	ball.Throw(fdt)
+	cannon.Aim(fdt)
 	#
 	Log()
 
